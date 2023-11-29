@@ -23,7 +23,7 @@ class LeagueCard extends StatelessWidget {
       margin: EdgeInsets.zero,
       elevation: 5,
       shadowColor: Colors.black,
-      child: LeagueCardColumn(logo: model.logo,name: model.name,color: elevationColor,)
+      child: LeagueCardColumn(logo: model.logo,name: model.name,color: elevationColor,onPressed: onPressed,)
     );
   }
 }

@@ -61,14 +61,13 @@ final class NetworkService {
     return response;
   }
 
-  Future<List<dynamic>> getFixtures() async {
+  Future<List<dynamic>> getFixture(int leagueID) async {
     final json = await dio.get(
       ApiConstants.api + ApiConstants.fixtures,
-      queryParameters: Map.fromEntries(
-        [
-          MapEntry('season', DateTime.now().year),
-        ],
-      ),
+      queryParameters: Map.fromEntries([
+        MapEntry("league", leagueID),
+        MapEntry('season', DateTime.now().year,)
+      ]),
       options: Options(headers: ApiConstants.apiHeader),
     );
     List<dynamic> response = await json.data['response'];

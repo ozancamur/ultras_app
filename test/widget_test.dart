@@ -11,6 +11,28 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:ultras_app/main.dart';
 
 void main() {
+  // setUp(
+  //   () {
+  //     print("here");
+  //   }
+  // );
+
+  // test("Fixture Test", () {
+  //   final fixture = true;
+  // });
+
+  // expect(fixture, isTrue);
+
+
+  // group("fixture group test", () { 
+  //   test("Fixture Test 1", () {
+  //   final fixture = true;
+  // });test("Fixture Test 2", () {
+  //   final fixture = true;
+  // });test("Fixture Test 3", () {
+  //   final fixture = true;
+  // });
+  // });
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());

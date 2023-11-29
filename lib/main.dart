@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultras_app/feature/view/fixture/view/fixture_view.dart';
 import 'package:ultras_app/feature/view/home/view/home_view.dart';
 
 Future<void> main() async {
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'AJ Paglia',
       ),
-      home: HomeView(),
+      home: FixtureView(leagueImage: '', leagueName: '',)
     );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ultras_app/core/components/gridview_builder/atomic_gridview_builder.dart';
+import 'package:ultras_app/feature/view/fixture/view/fixture_view.dart';
 import 'package:ultras_app/feature/view/home/controller/home_controller.dart';
 import 'package:ultras_app/feature/view/home/model/league_model.dart';
 import 'package:ultras_app/feature/widgets/home/card/league_card.dart';
@@ -29,7 +30,7 @@ class HomeGridViewBuilder extends StatelessWidget {
                     return LeagueCard(
                       model: model,
                       elevationColor: Colors.primaries[index* 100 % Colors.primaries.length],
-                      onPressed: () {},
+                      onPressed: () => Get.to(() => FixtureView(leagueImage: model.logo, leagueName: model.name)),
                     );
                   },
         ),

@@ -7,11 +7,12 @@ import 'package:ultras_app/core/components/column/column_field.dart';
 import 'package:ultras_app/core/constants/color/color_constants.dart';
 
 class LeagueCardColumn extends StatelessWidget {
-  const LeagueCardColumn({super.key,required this.logo ,required this.name, required this.color});
+  const LeagueCardColumn({super.key,required this.logo ,required this.name, required this.color, required this.onPressed});
 
   final String logo;
   final String name;
   final Color color;
+  final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class LeagueCardColumn extends StatelessWidget {
         elevation: 10,
         elevationColor: Colors.white,
         child: AtomicElevatedButton(
-          onPressed: () {},
+          onPressed: onPressed,
           style: ElevatedButton.styleFrom(
             backgroundColor: Colors.white,
             foregroundColor: color,
