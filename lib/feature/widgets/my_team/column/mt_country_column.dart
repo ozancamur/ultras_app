@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/column/column_field.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
+import '../../../../core/components/column/column_field.dart';
+import '../../../../core/constants/style/text/text_style_constants.dart';
 
 class MyTeamColumn extends StatelessWidget {
   const MyTeamColumn({

@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:ultras_app/core/network/network_service.dart';
-import 'package:ultras_app/feature/view/fixture/model/parent_model/fixture_response_model.dart';
+import '../../../../core/init/network/network_service.dart';
+import '../model/parent_model/fixture_response_model.dart';
 
 class FixtureController extends GetxController {
   // ! NETWORK

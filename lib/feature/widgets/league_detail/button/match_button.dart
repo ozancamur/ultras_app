@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/button/atomic_text_button.dart';
-import 'package:ultras_app/feature/widgets/league_detail/column/score_and_time_column.dart';
-import 'package:ultras_app/feature/widgets/league_detail/list_tile/away_list_tile.dart';
-import 'package:ultras_app/feature/widgets/league_detail/list_tile/home_list_tile.dart';
+import 'package:ultras_app/core/components/button/text_button/atomic_text_button.dart';
+import '../column/score_and_time_column.dart';
+import '../list_tile/away_list_tile.dart';
+import '../list_tile/home_list_tile.dart';
 
 class MatchButton extends StatelessWidget {
   const MatchButton({super.key, required this.onPressed, required this.foregroundColor});

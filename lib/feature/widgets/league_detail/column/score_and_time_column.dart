@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/components/column/column_field.dart';
+
+import '../../../../core/components/column/column_field.dart';
 
 class ScoreAndTimeColumn extends StatelessWidget {
   const ScoreAndTimeColumn({super.key});

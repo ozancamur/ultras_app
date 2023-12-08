@@ -1,8 +1,9 @@
 import 'package:get/get.dart';
-import 'package:ultras_app/core/network/network_service.dart';
-import 'package:ultras_app/feature/view/my_team/model/my_country_model.dart';
-import 'package:ultras_app/feature/view/my_team/model/my_leagues_model.dart';
-import 'package:ultras_app/feature/view/my_team/model/my_team_model.dart';
+
+import '../../../../core/init/network/network_service.dart';
+import '../model/my_country_model.dart';
+import '../model/my_leagues_model.dart';
+import '../model/my_team_model.dart';
 
 class MyTeamController extends GetxController {
   // ! NETWORK

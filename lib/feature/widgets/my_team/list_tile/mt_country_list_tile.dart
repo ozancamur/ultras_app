@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kartal/kartal.dart';
-import 'package:ultras_app/core/components/list_tile/atomic_list_tile.dart';
-import 'package:ultras_app/core/constants/image/image_constants.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
-import 'package:ultras_app/feature/view/my_team/model/my_country_model.dart';
+import '../../../../core/components/list_tile/atomic_list_tile.dart';
+import '../../../../core/constants/image/image_enum.dart';
+import '../../../../core/constants/style/text/text_style_constants.dart';
+import '../../../view/my_team/model/my_country_model.dart';
 
 class CountryListTile extends StatelessWidget {
   const CountryListTile({
@@ -27,7 +27,7 @@ class CountryListTile extends StatelessWidget {
         width: Get.width,
         child: AtomicListTile(
           leading: noImageList.contains(country.code)
-              ? Image.asset(ImageConstants.noImage.toPng)
+              ? Image.asset(ImageEnum.noImage.toPng)
               : Image.network(country.flag),
           title: Text(
             country.name,

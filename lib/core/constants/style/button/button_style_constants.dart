@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
+
+import '../../color/color_constants.dart';
 
 class ButtonStyleConstants{
   ButtonStyleConstants(BuildContext context) : currentContext = context;

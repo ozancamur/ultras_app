@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/components/appbar/atomic_app_bar.dart';
+
+import '../../../../core/components/appbar/atomic_app_bar.dart';
 
 class MyTeamAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MyTeamAppBar({super.key});

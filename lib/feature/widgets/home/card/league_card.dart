@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/components/card/atomic_card.dart';
-import 'package:ultras_app/feature/view/home/model/league_model.dart';
-import 'package:ultras_app/feature/widgets/league_detail/column/league_card_column.dart';
+import '../../../../core/components/card/atomic/atomic_card.dart';
+import '../../../view/home/model/league_model.dart';
+import '../../league_detail/column/league_card_column.dart';
 
 class LeagueCard extends StatelessWidget {
   const LeagueCard({

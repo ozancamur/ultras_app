@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/components/list_tile/atomic_list_tile.dart';
+
+import '../../../../core/components/list_tile/atomic_list_tile.dart';
 
 class AwayListTile extends StatelessWidget {
   const AwayListTile({super.key});

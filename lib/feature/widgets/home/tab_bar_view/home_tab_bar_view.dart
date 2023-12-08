@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/feature/view/home/controller/home_controller.dart';
-import 'package:ultras_app/feature/widgets/home/girdview_builder/home_gridview_builder.dart';
+
+import '../../../view/home/controller/home_controller.dart';
+import '../girdview_builder/home_gridview_builder.dart';
 
 class HomeTabBarView extends StatelessWidget {
   const HomeTabBarView({super.key, required this.controller});

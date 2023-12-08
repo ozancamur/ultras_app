@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kartal/kartal.dart';
-import 'package:ultras_app/core/components/button/atomic_elevated_button.dart';
-import 'package:ultras_app/core/components/card/atomic_card.dart';
-import 'package:ultras_app/core/components/column/column_field.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
+import '../../../../core/components/button/elevated_button/atomic_elevated_button.dart';
+import '../../../../core/components/card/atomic/atomic_card.dart';
+import '../../../../core/components/column/column_field.dart';
+import '../../../../core/constants/color/color_constants.dart';
 
 class LeagueCardColumn extends StatelessWidget {
   const LeagueCardColumn({super.key,required this.logo ,required this.name, required this.color, required this.onPressed});

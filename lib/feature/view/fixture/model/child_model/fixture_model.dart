@@ -1,6 +1,6 @@
-import 'package:ultras_app/feature/view/fixture/model/grand_child_model/fixture/periods_model.dart';
-import 'package:ultras_app/feature/view/fixture/model/grand_child_model/fixture/status_model.dart';
-import 'package:ultras_app/feature/view/fixture/model/grand_child_model/fixture/venue_model.dart';
+import '../grand_child_model/fixture/periods_model.dart';
+import '../grand_child_model/fixture/status_model.dart';
+import '../grand_child_model/fixture/venue_model.dart';
 
 class FixtureModel {
   int id;

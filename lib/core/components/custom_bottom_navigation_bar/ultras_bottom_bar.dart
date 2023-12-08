@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rive/rive.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import 'package:ultras_app/core/utils/rive/rive_controller.dart';
-import 'package:ultras_app/core/utils/rive/rive_enum.dart';
+import 'package:ultras_app/core/utils/rive/controller/rive_controller.dart';
+
+import '../../constants/color/color_constants.dart';
+import '../../utils/rive/enum/rive_enum.dart';
 
 class UltrasBottomBar extends StatelessWidget {
   UltrasBottomBar({super.key});

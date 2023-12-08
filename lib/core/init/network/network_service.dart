@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:ultras_app/core/constants/app/api/api_constants.dart';
+
+import '../../constants/app/api/api_constants.dart';
 
 final class NetworkService {
   static final NetworkService instance = NetworkService();
@@ -56,7 +57,6 @@ final class NetworkService {
         headers: ApiConstants.apiHeader,
       ),
     );
-    print("getLeaguesAndCups ${json.data['response']}");
     List<dynamic> response = await json.data['response'];
     return response;
   }

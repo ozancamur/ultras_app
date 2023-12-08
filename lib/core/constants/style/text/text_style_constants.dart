@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
+
+import '../../color/color_constants.dart';
 
 @immutable
 class TextStyleConstants {

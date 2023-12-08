@@ -7,7 +7,6 @@ class StringConstants {
   static String get ultrasApp => 'Ultras App';
   static String get appBarLeadingText => 'back';
 
-
   // LOG IN VIEW
   static String get logInText => 'Log In';
   static String get logInWithGoogleButtonText => 'Continue with Google';
@@ -28,6 +27,11 @@ class StringConstants {
   static String get passwordTextFieldLabelText => 'password';
 
   static String get version => 'version 1.0.0.';
+
+  // HOME VIEW
+  static String get txtLeague => 'LEAGUE';
+  static String get txtCup => 'CUP';
+  static String get txtPlural => 'S';
 
   // MY TEAM VIEW
   static String get chooseCountry => 'Choose your country';

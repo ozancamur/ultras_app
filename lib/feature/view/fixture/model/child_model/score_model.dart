@@ -1,4 +1,4 @@
-import 'package:ultras_app/feature/view/fixture/model/grand_child_model/score/score_child_model.dart';
+import '../grand_child_model/score/score_child_model.dart';
 
 class ScoreModel {
   final ScoreChildModel halftime;

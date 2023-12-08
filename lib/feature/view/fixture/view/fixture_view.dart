@@ -1,10 +1,11 @@
+// ignore_for_file: must_be_immutable
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ultras_app/core/components/card/fixture_card_background/fixture_card_background.dart';
-import 'package:ultras_app/core/components/observable_body/observable_body.dart';
 import 'package:ultras_app/core/constants/color/color_constants.dart';
+import 'package:ultras_app/core/init/base/view/base_view.dart';
 import 'package:ultras_app/feature/view/fixture/controller/fixture_controller.dart';
-import 'package:dotted_border/dotted_border.dart';
 
 class FixtureView extends StatelessWidget {
   FixtureView({
@@ -16,20 +17,33 @@ class FixtureView extends StatelessWidget {
   final String leagueImage;
   final String leagueName;
 
-  final controller = Get.put(FixtureController());
+  FixtureController controller = Get.put(FixtureController());
 
   @override
   Widget build(BuildContext context) {
     //controller.getFixture(73);
-    return Scaffold(
-      body: ObservableBody(
-        isLoading: controller.isLoading,
-        body: bodyField(),
-      ),
+    return BaseView<FixtureController>(
+      isLoading: controller.isLoading,
+      viewmodel: FixtureController(),
+      onControllerReady: (viewmodel) {
+        controller = viewmodel;
+      },
+      pageFunctions: () async {
+        //controller.getFixture(32);
+      },
+      onPageBuilder: (context, controller) {
+        return buildPageField();
+      },
     );
   }
 
-  bodyField() {
+  buildPageField() {
+    return Scaffold(
+      body: buildBodyField()
+    );
+  }
+
+  buildBodyField() {
     return SafeArea(
       child: Padding(
         padding: EdgeInsets.only(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
+
+import '../../constants/style/text/text_style_constants.dart';
 
 class AtomicTextField extends StatelessWidget {
   const AtomicTextField({

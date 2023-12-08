@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rive/rive.dart';
+import 'package:ultras_app/core/constants/rive/rive_constants.dart';
 
 class UltrasLoading extends StatelessWidget {
   const UltrasLoading({super.key});
@@ -14,9 +15,11 @@ class UltrasLoading extends StatelessWidget {
         decoration: const BoxDecoration(
           color: Colors.black,
         ),
-        child: const RiveAnimation.asset("assets/rive/football_loading.riv",
-        artboard: "New Artboard",),
-      )
+        child: RiveAnimation.asset(
+          RiveConstants.loading,
+          artboard: RiveConstants.riveNewArtboard,
+        ),
+      ),
     );
   }
 }

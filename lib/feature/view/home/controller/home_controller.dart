@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:ultras_app/core/network/network_service.dart';
-import 'package:ultras_app/feature/view/home/model/league_model.dart';
+import '../../../../core/init/network/network_service.dart';
+import '../model/league_model.dart';
 
 class HomeController extends GetxController {
   // ! NETWORK
@@ -15,9 +15,14 @@ class HomeController extends GetxController {
   var leagues = <LeagueModel>[].obs;
   var cups = <LeagueModel>[].obs;
 
+  void changeLoading() {
+    isLoading.value = !isLoading.value;
+  }
+
   Future<void> getLeaguesAndCups() async {
-    isLoading.value = true;    
+    changeLoading();
     final response = await service.getLeaguesAndCups();
+    print('RESPONSE => $response');
     for (final league in response) {
       if (league['league']['type'] == 'League') {
         leagues.add(
@@ -37,8 +42,10 @@ class HomeController extends GetxController {
             logo: league['league']['logo'],
           ),
         );
-      } else {return; }
+      } else {
+        return;
+      }
     }
-    isLoading.value = false;
+    changeLoading();
   }
 }

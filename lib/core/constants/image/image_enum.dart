@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-enum ImageConstants {
+enum ImageEnum {
 
   ultrasLogo('ultras_logo'),
   noImage('no_image');
 
   final String value;
-  const ImageConstants(this.value);
+  const ImageEnum(this.value);
 
   String get toPng => 'assets/images/$value.png'; 
   AssetImage get toImage => AssetImage('assets/images/$value.png');

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/tabbar/atomic_tabbar.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
+import 'package:ultras_app/core/constants/string/string_constants.dart';
+import '../../../../core/components/tabbar/atomic_tabbar.dart';
+import '../../../../core/constants/color/color_constants.dart';
+import '../../../../core/constants/style/text/text_style_constants.dart';
 
 class HomeTabBar extends StatelessWidget {
   const HomeTabBar({super.key});
@@ -24,8 +25,8 @@ class HomeTabBar extends StatelessWidget {
         borderSide: BorderSide.none,
       ),
       tabs: [
-        buildTab( 'LEAGUE'),
-        buildTab( 'CUP'),
+        buildTab(StringConstants.txtLeague),
+        buildTab(StringConstants.txtCup),
       ],
     );
   }
@@ -46,7 +47,7 @@ class HomeTabBar extends StatelessWidget {
             child: Text(text),
           ),
           Text(
-                  "S",
+                  StringConstants.txtPlural,
                   style: TextStyle(
                     color: ColorConstants.lightTextColor,
                     
