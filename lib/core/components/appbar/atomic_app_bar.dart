@@ -11,26 +11,28 @@ import '../../constants/string/string_constants.dart';
 class AtomicAppBar extends StatelessWidget {
   AtomicAppBar({
     required this.isDisplayBack,
+    this.backgroundColor,
     this.title,
     this.actions,
     super.key,
   });
 
   bool isDisplayBack;
+  Color? backgroundColor;
   Widget? title;
   List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      surfaceTintColor: ColorConstants.WHITE,
+      surfaceTintColor: backgroundColor ?? ColorConstants.WHITE,
       elevation: 0,
       leadingWidth: context.sized.dynamicWidth(.175),
       leading: isDisplayBack == true ? backMethod() : const SizedBox.shrink(),
       title: title,
       centerTitle: true,
       actions: actions,
-      backgroundColor: ColorConstants.WHITE,
+      backgroundColor: backgroundColor ?? ColorConstants.WHITE,
       
     );
   }
@@ -51,8 +53,8 @@ class AtomicAppBar extends StatelessWidget {
           child: TextButton(
             onPressed: () => Get.back(),
             child: Text(
-              StringConstants.appBarLeadingText,
-              style: TextStyleConstants.appBarLeadingBackTextStyle,
+              StringConstants.APPBAR_LEADING_TEXT,
+              style: TextStyleConstants.APPBAR_LEADING_BACK_TEXT_STYLE,
             ),
           ),
         ),

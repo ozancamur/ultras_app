@@ -1,41 +1,23 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 
 @immutable
 class StringConstants {
   const StringConstants._();
 
-  static String get ultrasApp => 'Ultras App';
-  static String get appBarLeadingText => 'back';
-
-  // LOG IN VIEW
-  static String get logInText => 'Log In';
-  static String get logInWithGoogleButtonText => 'Continue with Google';
-  static String get logInOrText => 'OR';
-  static String get logInNameTextFieldLabelText => 'Ozan Camur';
-  static String get logInMailTextFieldLabelText => 'ozancamur@example.com';
-  static String get logInPasswordTextFieldLabelText => '123456';
-  static String get logInForgotPasswordTextButtonText => 'Forgot Password?';
-
-  static String get signInElevatedButtonText => 'SIGN IN';
-  static String get createAccountElevatedButtonText => 'Create Account';
-
-  static String get signUpTextButtonText => 'Do not you have an account? Sign Up';
-  static String get signInTextButtonText => 'LOG IN';
-
-  static String get nameTextFieldLabelText => 'name';
-  static String get mailTextFieldLabelText => 'mail';
-  static String get passwordTextFieldLabelText => 'password';
-
-  static String get version => 'version 1.0.0.';
+  static String get ULTRAS_APP_TEXT => 'Ultras App';
+  static String get APPBAR_LEADING_TEXT => 'back';
+  static String get APPLICATION_VERSION => 'version 1.0.0.';
 
   // HOME VIEW
-  static String get txtLeague => 'LEAGUE';
-  static String get txtCup => 'CUP';
-  static String get txtPlural => 'S';
+  static String get TXT_LEAGUE => 'LEAGUE';
+  static String get TXT_CUP => 'CUP';
+  static String get TXT_PLURAL => 'S';
 
   // MY TEAM VIEW
-  static String get chooseCountry => 'Choose your country';
-  static String get chooseLeague => 'Choose your league';
-  static String get chooseTeam => 'Choose your team';
+  static String get TXT_CHOOSE_COUNTRY => 'Choose your country';
+  static String get TXT_CHOOSE_LEAGUE => 'Choose your league';
+  static String get TXT_CHOOSE_TEAM => 'Choose your team';
   
 }

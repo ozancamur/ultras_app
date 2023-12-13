@@ -1,25 +1,13 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:flutter/material.dart';
 import 'package:kartal/kartal.dart';
-
-import '../../color/color_constants.dart';
 
 class ButtonStyleConstants{
   ButtonStyleConstants(BuildContext context) : currentContext = context;
   final BuildContext currentContext;
 
-  ButtonStyle get authButtonStyle => ElevatedButton.styleFrom(
-        fixedSize: Size(
-            currentContext.sized.dynamicWidth(.7),
-            currentContext.sized.dynamicHeight(.06),
-            ),
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(50),
-        ),
-        backgroundColor: ColorConstants.ULTRAS_BLUE,
-        foregroundColor: ColorConstants.ULTRAS_WHITE,
-      );
-
-  ButtonStyle get textButtonStyle => TextButton.styleFrom(
+  ButtonStyle get TEXT_BUTTON_STYLE => TextButton.styleFrom(
         padding: EdgeInsets.zero,
         minimumSize: Size.fromHeight(currentContext.sized.dynamicHeight(.05)),
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
@@ -27,16 +15,7 @@ class ButtonStyleConstants{
         foregroundColor: const Color.fromARGB(21, 167, 167, 167),
       );
 
-      // * LOG IN VIEW
-  
-  ButtonStyle get forgotPasswordTextButtonStyle => TextButton.styleFrom(
-        padding: EdgeInsets.zero,
-        minimumSize: Size.fromHeight(currentContext.sized.dynamicHeight(.025)),
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        alignment: Alignment.centerRight,
-        foregroundColor: const Color.fromARGB(21, 167, 167, 167),
 
-  );
 }
 
 

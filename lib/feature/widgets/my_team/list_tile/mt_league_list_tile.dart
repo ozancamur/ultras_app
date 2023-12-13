@@ -30,11 +30,11 @@ class LeagueListTile extends StatelessWidget {
           ),
           title: Text(
             league.name,
-            style: TextStyleConstants.listTileTitleTextStyle,
+            style: TextStyleConstants.LIST_TILE_TITLE_TEXT_STYLE,
           ),
           subtitle: Text(
             league.type,
-            style: TextStyleConstants.listTileSubTitleTextStyle,
+            style: TextStyleConstants.LIST_TILE_SUBTITLE_TEXT_STYLE,
           ),
           trailing: IconButton(
             onPressed: countryPressed,

@@ -16,8 +16,8 @@ class UltrasLoading extends StatelessWidget {
           color: Colors.black,
         ),
         child: RiveAnimation.asset(
-          RiveConstants.loading,
-          artboard: RiveConstants.riveNewArtboard,
+          RiveConstants.RIVE_LOADING,
+          artboard: RiveConstants.RIVE_NEW_ARTBOARD,
         ),
       ),
     );

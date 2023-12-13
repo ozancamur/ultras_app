@@ -28,7 +28,7 @@ class AtomicTextField extends StatelessWidget {
         fillColor: Colors.white,
         filled: true,
         label: Text(label),
-        labelStyle: TextStyleConstants.labelStyle,
+        labelStyle: TextStyleConstants.LABEL_STYLE,
         contentPadding: EdgeInsets.symmetric(
             horizontal: context.sized.dynamicWidth(.1),
             vertical: context.sized.dynamicHeight(.02)),

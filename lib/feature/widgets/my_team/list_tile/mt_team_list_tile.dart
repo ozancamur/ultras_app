@@ -31,11 +31,11 @@ class TeamListTile extends StatelessWidget {
           ),
           title: Text(
             team.name,
-            style: TextStyleConstants.listTileTitleTextStyle,
+            style: TextStyleConstants.LIST_TILE_TITLE_TEXT_STYLE,
           ),
           subtitle: Text(
             '${team.founded}',
-            style: TextStyleConstants.listTileSubTitleTextStyle,
+            style: TextStyleConstants.LIST_TILE_SUBTITLE_TEXT_STYLE,
           ),
           trailing: IconButton(
             onPressed: teamPressed,

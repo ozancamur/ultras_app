@@ -7,7 +7,6 @@ import 'package:ultras_app/core/init/base/view/base_view.dart';
 import 'package:ultras_app/feature/view/fixture/controller/fixture_controller.dart';
 import 'package:ultras_app/feature/widgets/fixture/image/fixture_image.dart';
 import 'package:ultras_app/feature/widgets/fixture/list_view_builder/league_fixture_list_view_builder.dart';
-import 'package:ultras_app/feature/widgets/fixture/sized_box/league_name/league_name.dart';
 
 class FixtureView extends StatelessWidget {
   FixtureView({

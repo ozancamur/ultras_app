@@ -18,15 +18,15 @@ class HomeTabBar extends StatelessWidget {
       overlayColor: ColorConstants.GREY,
       labelColor: ColorConstants.BLACK,
       unselectedLabelColor: ColorConstants.GREY,
-      labelStyle: TextStyleConstants.selectedTabBarStyle,
-      unselectedLabelStyle: TextStyleConstants.unselectedTabBarStyle,
+      labelStyle: TextStyleConstants.SELECTTED_TABBAR_STYLE,
+      unselectedLabelStyle: TextStyleConstants.UNSELECTTED_TABBAR_STYLE,
       indicator: const UnderlineTabIndicator(
         borderRadius: BorderRadius.zero,
         borderSide: BorderSide.none,
       ),
       tabs: [
-        buildTab(StringConstants.txtLeague),
-        buildTab(StringConstants.txtCup),
+        buildTab(StringConstants.TXT_LEAGUE),
+        buildTab(StringConstants.TXT_CUP),
       ],
     );
   }
@@ -47,7 +47,7 @@ class HomeTabBar extends StatelessWidget {
             child: Text(text),
           ),
           Text(
-                  StringConstants.txtPlural,
+                  StringConstants.TXT_PLURAL,
                   style: TextStyle(
                     color: ColorConstants.LIGHT_TEXT_COLOR,
                     

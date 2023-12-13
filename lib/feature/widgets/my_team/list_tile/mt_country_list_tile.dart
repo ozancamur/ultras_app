@@ -27,15 +27,15 @@ class CountryListTile extends StatelessWidget {
         width: Get.width,
         child: AtomicListTile(
           leading: noImageList.contains(country.code)
-              ? Image.asset(ImageEnum.noImage.toPng)
+              ? Image.asset(ImageEnum.NO_IMAGE.TO_PNG)
               : Image.network(country.flag),
           title: Text(
             country.name,
-            style: TextStyleConstants.listTileTitleTextStyle,
+            style: TextStyleConstants.LIST_TILE_TITLE_TEXT_STYLE,
           ),
           subtitle: Text(
             country.code == null ? '--' : country.code!,
-            style: TextStyleConstants.listTileSubTitleTextStyle,
+            style: TextStyleConstants.LIST_TILE_SUBTITLE_TEXT_STYLE,
           ),
           trailing: IconButton(
             onPressed: countryPressed,

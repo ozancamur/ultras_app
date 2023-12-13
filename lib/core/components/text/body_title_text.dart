@@ -14,17 +14,14 @@ class BodyTitleText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: Get.height * .175,
+      height: Get.height * .075,
       width: Get.width,
-      child: Padding(
-        padding: EdgeInsets.only(left: Get.width * .04, top: Get.height * .005),
-        child: Text(
-          text.toUpperCase().trim(),
-          style: TextStyle(
-            height: 0,
-            fontSize: 70,
-            color: color,
-          ),
+      child: Text(
+        text.toUpperCase().trim(),
+        style: TextStyle(
+          height: 0,
+          fontSize: 70,
+          color: color,
         ),
       ),
     );

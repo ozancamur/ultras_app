@@ -9,14 +9,14 @@ class HomeService {
   Future<List<dynamic>> getLeaguesAndCups() async {
     try {
       final json = await dio.get(
-      ApiConstants.baseUrl + ApiConstants.leagues,
+      ApiConstants.BASE_URL + ApiConstants.LEAGUES,
       queryParameters: Map.fromEntries(
         [
           MapEntry('season', DateTime.now().year.toString()),
         ]
       ),
       options: Options(
-        headers: ApiConstants.headers,
+        headers: ApiConstants.HEADERS,
       ),
     );
     List<dynamic> response = await json.data['response'];

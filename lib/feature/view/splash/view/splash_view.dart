@@ -27,7 +27,7 @@ class _SplashViewState extends State<SplashView> {
                 const Center(
                   child: CircularProgressIndicator(),
                 ),
-                Text("version 1.0.0", style: TextStyleConstants.labelStyle,)
+                Text("version 1.0.0", style: TextStyleConstants.LABEL_STYLE,)
               ],
             ),
           ),

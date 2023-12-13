@@ -22,7 +22,7 @@ class MyTeamColumn extends StatelessWidget {
         children: [
           Text(
             chooseText,
-            style: TextStyleConstants.chooseTextStyle,
+            style: TextStyleConstants.CHOOSE_TEXT_STYLE,
           ),
           listViewBuilder,
         ],

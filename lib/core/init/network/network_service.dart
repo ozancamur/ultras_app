@@ -14,7 +14,7 @@ final class NetworkManager {
 
   NetworkManager._init() {
     final baseOptions = BaseOptions(
-        baseUrl: ApiConstants.baseUrl, headers: ApiConstants.headers);
+        baseUrl: ApiConstants.BASE_URL, headers: ApiConstants.HEADERS);
 
     dio = Dio(baseOptions);
 
