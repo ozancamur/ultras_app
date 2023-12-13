@@ -36,8 +36,13 @@ class HomeGridViewBuilder extends StatelessWidget {
                 model: model,
                 elevationColor:
                     Colors.primaries[index * 100 % Colors.primaries.length],
-                onPressed: () => Get.to(() => FixtureView(
-                    leagueImage: model.logo, leagueName: model.name)),
+                onPressed: () => Get.to(
+                  () => FixtureView(
+                    leagueID: model.id,
+                    leagueImage: model.logo,
+                    leagueName: model.name,
+                  ),
+                ),
               );
             },
           ),

@@ -7,7 +7,7 @@ import '../model/my_team_model.dart';
 
 class MyTeamController extends GetxController {
   // ! NETWORK
-  final service = NetworkService.instance;
+  final service = NetworkManager.instance;
 
   // ! DATA LİSTS
   List<MyCountryModel> countryList = <MyCountryModel>[].obs;

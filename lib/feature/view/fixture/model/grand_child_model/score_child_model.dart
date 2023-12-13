@@ -1,6 +1,6 @@
 class ScoreChildModel {
-  final int? home;
-  final int? away;
+  int? home;
+  int? away;
 
   ScoreChildModel({
     this.home,

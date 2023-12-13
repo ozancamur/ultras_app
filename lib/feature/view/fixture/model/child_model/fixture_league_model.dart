@@ -1,19 +1,19 @@
 class FixtureLeagueModel {
-  final int id;
-  final String name;
-  final String country;
-  final String logo;
-  final String flag;
-  final int season;
-  final String round;
+  int? id;
+  String? name;
+  String? country;
+  String? logo;
+  String? flag;
+  int? season;
+  String? round;
 
   FixtureLeagueModel({
-    required this.id,
-    required this.name,
-    required this.country,
-    required this.logo,
-    required this.flag,
-    required this.season,
-    required this.round
+    this.id,
+    this.name,
+    this.country,
+    this.logo,
+    this.flag,
+    this.season,
+    this.round
   });
 }

@@ -1,76 +1,44 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 
-import '../../constants/app/api/api_constants.dart';
+import '../../constants/api/api_constants.dart';
 
-final class NetworkService {
-  static final NetworkService instance = NetworkService();
-
-  final dio = Dio();
-
-  Future<List<dynamic>> getAllCountries() async {
-    final json = await dio.get(
-      ApiConstants.api + ApiConstants.countries,
-      options: Options(
-        headers: ApiConstants.apiHeader,
-      ),
-    );
-    List<dynamic> response = await json.data['response'];
-    return response;
+final class NetworkManager {
+  static NetworkManager? _instance;
+  static NetworkManager? get instance {
+    _instance ??= NetworkManager._init();
+    return _instance;
   }
 
-  Future<List<dynamic>> getLeaguesOfCountry(String country) async {
-    final json = await dio.get(
-      ApiConstants.api + ApiConstants.leagues,
-      queryParameters: Map.fromEntries([MapEntry("country", country)]),
-      options: Options(
-        headers: ApiConstants.apiHeader,
-      ),
-    );
-    List<dynamic> response = await json.data['response'];
-    return response;
-  }
+  var dio = Dio();
 
-  Future<List<dynamic>> getTeamsOfLeague(int leagueID) async {
-    final json = await dio.get(
-      ApiConstants.api + ApiConstants.teams,
-      queryParameters: Map.fromEntries([
-        MapEntry("league", leagueID),
-        MapEntry('season', DateTime.now().year)
-      ]),
-      options: Options(
-        headers: ApiConstants.apiHeader,
-      ),
-    );
-    List<dynamic> response = await json.data['response'];
-    return response;
-  }
+  NetworkManager._init() {
+    final baseOptions = BaseOptions(
+        baseUrl: ApiConstants.baseUrl, headers: ApiConstants.headers);
 
-  Future<List<dynamic>> getLeaguesAndCups() async {
-    final json = await dio.get(
-      ApiConstants.api + ApiConstants.leagues,
-      queryParameters: Map.fromEntries(
-        [
-          MapEntry('season', DateTime.now().year.toString()),
-        ]
-      ),
-      options: Options(
-        headers: ApiConstants.apiHeader,
-      ),
-    );
-    List<dynamic> response = await json.data['response'];
-    return response;
-  }
+    dio = Dio(baseOptions);
 
-  Future<List<dynamic>> getFixture(int leagueID) async {
-    final json = await dio.get(
-      ApiConstants.api + ApiConstants.fixtures,
-      queryParameters: Map.fromEntries([
-        MapEntry("league", leagueID),
-        MapEntry('season', DateTime.now().year,)
-      ]),
-      options: Options(headers: ApiConstants.apiHeader),
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          
+        },
+        onError: (error, handler) {
+          return debugPrint('''
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        -----------------------------------
+        |||||| NETWORK MANAGER ERROR ||||||
+        -----------------------------------
+          error message:
+        ${error.message}
+        ...................................
+        -----------------------------------
+        |||||| NETWORK MANAGER ERROR ||||||
+        -----------------------------------
+        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+        ''');
+        },
+      ),
     );
-    List<dynamic> response = await json.data['response'];
-    return response;
   }
 }

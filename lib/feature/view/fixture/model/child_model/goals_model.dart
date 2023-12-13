@@ -1,6 +1,9 @@
-class GoalsModel {
-  final int home;
-  final int away;
+class FixtureGoalsModel {
+  int? home;
+  int? away;
 
-  GoalsModel({required this.home, required this.away});
+  FixtureGoalsModel({
+    this.home,
+    this.away,
+  });
 }

@@ -1,8 +1,12 @@
-import 'package:ultras_app/feature/view/fixture/model/grand_child_model/teams/team_detail_model.dart';
 
-class TeamsModel {
-  final TeamDetailModel home;
-  final TeamDetailModel away;
+import '../grand_child_model/team_detail_model.dart';
 
-  TeamsModel({required this.home, required this.away});
+class FixtureTeamsModel {
+  TeamDetailModel? home;
+  TeamDetailModel? away;
+
+  FixtureTeamsModel({
+    this.home,
+    this.away,
+  });
 }

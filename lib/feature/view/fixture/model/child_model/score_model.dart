@@ -1,15 +1,15 @@
-import '../grand_child_model/score/score_child_model.dart';
+import '../grand_child_model/score_child_model.dart';
 
-class ScoreModel {
-  final ScoreChildModel halftime;
-  final ScoreChildModel fulltime;
-  final ScoreChildModel extratime;
-  final ScoreChildModel penalty;
+class FixtureScoreModel {
+ ScoreChildModel? halftime;
+ ScoreChildModel? fulltime;
+ ScoreChildModel? extratime;
+ ScoreChildModel? penalty;
 
-  ScoreModel({
-    required this.halftime,
-    required this.fulltime,
-    required this.extratime,
-    required this.penalty,
+  FixtureScoreModel({
+     this.halftime,
+     this.fulltime,
+     this.extratime,
+     this.penalty,
   });
 }

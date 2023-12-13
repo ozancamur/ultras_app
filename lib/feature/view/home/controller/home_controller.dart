@@ -1,10 +1,14 @@
 import 'package:get/get.dart';
-import '../../../../core/init/network/network_service.dart';
+import 'package:ultras_app/feature/view/home/service/home_service.dart';
 import '../model/league_model.dart';
 
 class HomeController extends GetxController {
-  // ! NETWORK
-  final service = NetworkService.instance;
+
+    
+  //final HomeService homeService;
+  //HomeService({required this.homeService});
+
+  final homeService = HomeService();
 
 // ! UI RESULTS
   var bodyIndex = 0.obs;
@@ -21,7 +25,7 @@ class HomeController extends GetxController {
 
   Future<void> getLeaguesAndCups() async {
     changeLoading();
-    final response = await service.getLeaguesAndCups();
+    final response = await homeService.getLeaguesAndCups();
     print('RESPONSE => $response');
     for (final league in response) {
       if (league['league']['type'] == 'League') {
