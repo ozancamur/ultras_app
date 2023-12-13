@@ -40,7 +40,12 @@ class MyPainter extends CustomPainter {
 
     RRect rectangle = RRect.fromRectAndRadius(
       Rect.fromPoints(
-          const Offset(0, 0), Offset(Get.width*.98, Get.height * .225)),
+        const Offset(0, 0),
+        Offset(
+          Get.width * .979,
+          Get.height * .225,
+        ),
+      ),
       const Radius.elliptical(15, 15),
     );
 
@@ -50,27 +55,29 @@ class MyPainter extends CustomPainter {
     Paint paintLineOne = Paint()
       ..color = beforeColor
       ..style = PaintingStyle.fill
-      ..strokeWidth = 10.0;
+      ..strokeWidth = 8.0;
 
     canvas.drawLine(
       Offset(startLineX, startLineY),
       Offset(startEndX, startEndY),
       paintLineOne,
     );
-
+/*
     Paint paintLineThree = Paint()
-      ..color = Colors.white
+      ..color = beforeColor
       ..style = PaintingStyle.stroke
       ..strokeWidth = 8.0;
 
-    double lineX3 = Get.width*.99;
-    double lineY3 = -Get.height;
+    double lineX3 = Get.width * .99;
+    double lineY3 = -Get.height * .3;
 
     canvas.drawLine(
       Offset(lineX3, lineY3),
       Offset(lineX3, -lineY3),
       paintLineThree,
     );
+  
+*/
   }
 
   @override

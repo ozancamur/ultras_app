@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
 
-class FixtureDetailController extends GetxController {
+class MatchController extends GetxController {
 
   var isLoading = false.obs;
 

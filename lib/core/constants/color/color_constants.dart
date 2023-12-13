@@ -5,9 +5,10 @@ class ColorConstants {
   const ColorConstants._();
 
   static Color get ULTRAS_BLUE => const Color.fromRGBO(1, 33, 105, 1);
-  static Color get ULTRAS_REDD => const Color.fromRGBO(200, 16, 46, 1);
-  static Color get ULTRAS_WHITE => const Color.fromRGBO(255, 245, 245, 1);
+  static Color get ULTRAS_RED => const Color.fromRGBO(255, 79, 49, 1);
+  static Color get ULTRAS_WHITE => const Color.fromRGBO(202, 188, 193, 1);
   static Color get ULTRAS_GREY => const Color.fromRGBO(60, 60, 60, 1);
+  static Color get ULTRAS_CUSTOM_COLOR => const Color.fromRGBO(153, 118, 139, 1);
   
   static Color get BLACK => const Color.fromRGBO(0, 0, 0, 1);
   static Color get WHITE => const Color.fromRGBO(255, 255, 255, 1);

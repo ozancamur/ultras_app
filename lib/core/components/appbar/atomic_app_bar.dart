@@ -10,14 +10,14 @@ import '../../constants/string/string_constants.dart';
 
 class AtomicAppBar extends StatelessWidget {
   AtomicAppBar({
-    required this.isDisplayBack,
+    this.isDisplayBack = false,
     this.backgroundColor,
     this.title,
     this.actions,
     super.key,
   });
 
-  bool isDisplayBack;
+  bool? isDisplayBack;
   Color? backgroundColor;
   Widget? title;
   List<Widget>? actions;
@@ -28,28 +28,32 @@ class AtomicAppBar extends StatelessWidget {
       surfaceTintColor: backgroundColor ?? ColorConstants.WHITE,
       elevation: 0,
       leadingWidth: context.sized.dynamicWidth(.175),
-      leading: isDisplayBack == true ? backMethod() : const SizedBox.shrink(),
+      leading: isDisplayBack == true
+          ? buildBackButtonField()
+          : const SizedBox.shrink(),
       title: title,
       centerTitle: true,
       actions: actions,
       backgroundColor: backgroundColor ?? ColorConstants.WHITE,
-      
     );
   }
 
-  Padding backMethod( ) {
+  buildBackButtonField() {
     return Padding(
-        padding: EdgeInsets.symmetric(
-            vertical: Get.context!.sized.dynamicHeight(.0125),
-            horizontal: Get.context!.sized.dynamicWidth(.01)),
-        child: Container(
-          padding: EdgeInsets.zero,
-          decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(30),
-              border: Border.all(
-                width: 1,
-                color: Colors.black,
-              )),
+      padding: EdgeInsets.symmetric(
+        vertical: Get.context!.sized.dynamicHeight(.01375),
+        horizontal: Get.context!.sized.dynamicWidth(.011),
+      ),
+      child: Container(
+        padding: EdgeInsets.zero,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(30),
+          border: Border.all(
+            width: 2,
+            color: ColorConstants.ULTRAS_GREY,
+          ),
+        ),
+        child: Center(
           child: TextButton(
             onPressed: () => Get.back(),
             child: Text(
@@ -58,6 +62,7 @@ class AtomicAppBar extends StatelessWidget {
             ),
           ),
         ),
-      );
+      ),
+    );
   }
 }

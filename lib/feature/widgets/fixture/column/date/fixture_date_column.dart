@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 
 import '../../../../../core/constants/color/color_constants.dart';
 
-class MatchDateColumn extends StatelessWidget {
-  MatchDateColumn({super.key, required this.day, required this.monthIndex});
+class FixtureDateColumn extends StatelessWidget {
+  FixtureDateColumn({super.key, required this.day, required this.monthIndex});
 
   final int day;
   final int monthIndex;

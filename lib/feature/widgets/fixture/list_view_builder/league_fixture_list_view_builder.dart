@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 
-import '../../../../core/components/card/fixture_card/fixture_card.dart';
+import '../card/fixture_card.dart';
 import '../../../../core/components/listview_builder/atomic_listview_builder.dart';
 import '../../../view/fixture/model/parent_model/fixture_response_model.dart';
 

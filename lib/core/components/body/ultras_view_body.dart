@@ -10,16 +10,11 @@ class UltrasViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: Get.width * .02,
-        ),
-        child: Stack(
-          children: [
-            child,
-            UltrasBottomBar()
-          ],
-        ),
+      child: Stack(
+        children: [
+          child,
+          UltrasBottomBar()
+        ],
       ),
     );
   }

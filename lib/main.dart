@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultras_app/core/constants/string/string_constants.dart';
+import 'package:ultras_app/feature/view/fixture/model/child_model/teams_model.dart';
+import 'package:ultras_app/feature/view/fixture/model/grand_child_model/team_detail_model.dart';
 import 'package:ultras_app/feature/view/fixture/model/parent_model/fixture_response_model.dart';
-import 'package:ultras_app/feature/view/fixture_detail/view/fixture_detail_view.dart';
+import 'package:ultras_app/feature/view/match/view/match_view.dart';
 import 'core/init/lang/application_language.dart';
 
 Future<void> main() async {
@@ -15,20 +18,28 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translationsKeys: ApplicationLanguage.translationKey,
-      locale: const Locale('tr', 'TR'),
+      locale: const Locale('en', 'US'),
       fallbackLocale: Get.deviceLocale,
       navigatorKey: Get.key,
-      navigatorObservers: [GetObserver()],
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'ULTRAS APPLICATION',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
-        fontFamily: 'AJ Paglia',
+        fontFamily: StringConstants.AJ_PAGLIA_FONT_STYLE,
       ),
-      home: FixtureDetailView(
-        model: FixtureResponseModel(),
-        backgroundColor: Colors.primaries[12 * 50 % Colors.primaries.length],
+      home: MatchView(
+        model: FixtureResponseModel(
+          teams: FixtureTeamsModel(
+            home: TeamDetailModel(
+              logo: 'https://upload.wikimedia.org/wikipedia/tr/b/b6/Manchester_United_FC_logo.png'
+            ),
+            away: TeamDetailModel(
+              logo: 'https://upload.wikimedia.org/wikipedia/tr/f/f6/Manchester_City.png'
+            )
+          ),
+        ),
+        backgroundColor:
+            Colors.primaries[2 * 10 % Colors.primaries.length].shade100,
       ),
     );
   }

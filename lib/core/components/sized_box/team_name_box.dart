@@ -9,14 +9,14 @@ class TeamNameBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-              width: Get.width * .3,
-              child: Text(
-                teamName,
-                style: const TextStyle(
-                  fontSize: 22.5,
-                  height: 0,
-                ),
-              ),
-            );
+      width: Get.width * .3,
+      child: Text(
+        teamName,
+        style: const TextStyle(
+          fontSize: 22.5,
+          height: 0,
+        ),
+      ),
+    );
   }
 }

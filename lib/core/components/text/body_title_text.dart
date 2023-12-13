@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
 
 class BodyTitleText extends StatelessWidget {
   const BodyTitleText({
@@ -18,11 +19,7 @@ class BodyTitleText extends StatelessWidget {
       width: Get.width,
       child: Text(
         text.toUpperCase().trim(),
-        style: TextStyle(
-          height: 0,
-          fontSize: 70,
-          color: color,
-        ),
+        style: TextStyleConstants.BODY_TITLE_TEXT_STYLE(color)
       ),
     );
   }
