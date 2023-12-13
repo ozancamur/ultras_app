@@ -39,10 +39,17 @@ class FixtureDetailView extends StatelessWidget {
   buildBodyField() {
     return Column(
       children: [
-        Text('FOOTBALL', style: TextStyle(
-          color: ColorConstants.BLACK
-        ),),
-        const Text('MATCH'),
+        Text(
+          'FOOTBALL',
+          style: TextStyle(
+            color: ColorConstants.BLACK,
+            fontSize: 23
+          ),
+        ),
+        Text(
+          'MATCH',
+          style: TextStyle(color: ColorConstants.ULTRAS_WHITE),
+        ),
       ],
     );
   }

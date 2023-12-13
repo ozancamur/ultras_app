@@ -62,7 +62,7 @@ class LeagueCardColumn extends StatelessWidget {
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
-                    color: ColorConstants.black,
+                    color: ColorConstants.BLACK,
                     fontFamily: 'AJ Paglia',
                   ),
                 ),

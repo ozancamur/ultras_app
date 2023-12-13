@@ -6,7 +6,7 @@ import 'package:ultras_app/feature/view/fixture_detail/view/fixture_detail_view.
 import 'package:ultras_app/feature/widgets/fixture/column/date/match_date_box.dart';
 import 'package:ultras_app/feature/widgets/fixture/dotted_border/team_image.dart';
 import 'package:ultras_app/feature/widgets/fixture/sized_box/match/time/match_time_box.dart';
-import 'package:ultras_app/feature/widgets/fixture/sized_box/team_names_box/team_names_box.dart';
+import 'package:ultras_app/feature/widgets/fixture/sized_box/team_names/team_names_box.dart';
 
 class FixtureCard extends StatelessWidget {
   const FixtureCard({

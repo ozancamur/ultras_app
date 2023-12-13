@@ -1,6 +1,8 @@
 // ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultras_app/core/components/text/body_title_text.dart';
+import 'package:ultras_app/core/constants/color/color_constants.dart';
 import 'package:ultras_app/core/init/base/view/base_view.dart';
 import 'package:ultras_app/feature/view/fixture/controller/fixture_controller.dart';
 import 'package:ultras_app/feature/widgets/fixture/image/fixture_image.dart';
@@ -68,7 +70,7 @@ class FixtureView extends StatelessWidget {
   }
 
   buildLeagueNameField() {
-    return LeagueName(text: leagueName);
+    return BodyTitleText(text: leagueName, color: ColorConstants.BLACK,);
   }
 
   buildLeagueFixtureField() {

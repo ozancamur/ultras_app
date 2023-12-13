@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:ultras_app/core/components/listview_builder/atomic_listview_builder.dart';
-import 'package:ultras_app/feature/view/fixture/model/parent_model/fixture_response_model.dart';
-import 'package:ultras_app/feature/widgets/fixture/card/fixture_card.dart';
+
+import '../../../../core/components/card/fixture_card/fixture_card.dart';
+import '../../../../core/components/listview_builder/atomic_listview_builder.dart';
+import '../../../view/fixture/model/parent_model/fixture_response_model.dart';
 
 class LeagueFixtureListViewBuilder extends StatelessWidget {
   const LeagueFixtureListViewBuilder({super.key, required this.list});
@@ -13,10 +14,10 @@ class LeagueFixtureListViewBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AtomicListViewBuilder(
-      height: Get.height * .7,
-      width: Get.width, 
-      length: list.length, 
-      itemBuilder: (context, index) {
+        height: Get.height * .7,
+        width: Get.width,
+        length: list.length,
+        itemBuilder: (context, index) {
           Color backgroundColor =
               Colors.primaries[index * 50 % Colors.primaries.length];
           Color beforeColor = index == 0
@@ -30,7 +31,6 @@ class LeagueFixtureListViewBuilder extends StatelessWidget {
             dateTime: DateFormat("yyyy-MM-dd'T'HH:mm")
                 .parse(model.fixture!.date.toString()),
           );
-      }
-    );
+        });
   }
 }

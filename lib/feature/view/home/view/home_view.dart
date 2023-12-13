@@ -37,7 +37,6 @@ class HomeView extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: buildBodyField(),
-        //bottomNavigationBar: UltrasBottomBar(),
       ),
     );
   }

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
 
-class LeagueName extends StatelessWidget {
-  const LeagueName({super.key, required this.text, required this.color});
+class BodyTitleText extends StatelessWidget {
+  const BodyTitleText({
+    super.key,
+    required this.text,
+    required this.color,
+  });
 
   final String text;
   final Color color;
