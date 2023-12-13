@@ -11,23 +11,20 @@ class HomeTabBarView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(top: Get.height * .04),
-      child: SizedBox(
-        width: Get.width,
-        height: Get.height,
-        child: TabBarView(
-          children: [
-            HomeGridViewBuilder(
-              controller: controller,
-              models: controller.leagues,
-            ),
-            HomeGridViewBuilder(
-              controller: controller,
-              models: controller.cups,
-            ),
-          ],
-        ),
+    return SizedBox(
+      width: Get.width,
+      height: Get.height*.8875,
+      child: TabBarView(
+        children: [
+          HomeGridViewBuilder(
+            controller: controller,
+            models: controller.leagues,
+          ),
+          HomeGridViewBuilder(
+            controller: controller,
+            models: controller.cups,
+          ),
+        ],
       ),
     );
   }

@@ -14,10 +14,10 @@ class HomeTabBar extends StatelessWidget {
       padding: EdgeInsets.zero,
       labelPadding: EdgeInsets.zero,
       indicatorPadding: EdgeInsets.zero,
-      dividerColor: ColorConstants.white,
-      overlayColor: ColorConstants.grey,
-      labelColor: ColorConstants.black,
-      unselectedLabelColor: ColorConstants.grey,
+      dividerColor: ColorConstants.WHITE,
+      overlayColor: ColorConstants.GREY,
+      labelColor: ColorConstants.BLACK,
+      unselectedLabelColor: ColorConstants.GREY,
       labelStyle: TextStyleConstants.selectedTabBarStyle,
       unselectedLabelStyle: TextStyleConstants.unselectedTabBarStyle,
       indicator: const UnderlineTabIndicator(
@@ -49,7 +49,7 @@ class HomeTabBar extends StatelessWidget {
           Text(
                   StringConstants.txtPlural,
                   style: TextStyle(
-                    color: ColorConstants.lightTextColor,
+                    color: ColorConstants.LIGHT_TEXT_COLOR,
                     
                   ),
                 ),

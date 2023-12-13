@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/components/column/column_field.dart';
-
 class ScoreAndTimeColumn extends StatelessWidget {
   const ScoreAndTimeColumn({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const AtomicColumn(
+    return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [

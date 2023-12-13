@@ -43,12 +43,12 @@ class MatchDateColumn extends StatelessWidget {
         Text(
           txtDay,
           style:
-              TextStyle(color: ColorConstants.black, fontSize: 25, height: 0),
+              TextStyle(color: ColorConstants.BLACK, fontSize: 25, height: 0),
         ),
         Text(
           '${monthMap[monthIndex]}',
           style: TextStyle(
-              color: ColorConstants.black.withOpacity(.5),
+              color: ColorConstants.BLACK.withOpacity(.5),
               fontSize: 25,
               height: 0),
         ),

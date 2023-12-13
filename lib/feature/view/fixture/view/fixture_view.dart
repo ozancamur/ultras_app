@@ -1,12 +1,11 @@
 // ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:intl/intl.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
 import 'package:ultras_app/core/init/base/view/base_view.dart';
 import 'package:ultras_app/feature/view/fixture/controller/fixture_controller.dart';
-import 'package:ultras_app/feature/view/fixture/service/fixture_service.dart';
-import 'package:ultras_app/feature/widgets/fixture/card/fixture_card.dart';
+import 'package:ultras_app/feature/widgets/fixture/image/fixture_image.dart';
+import 'package:ultras_app/feature/widgets/fixture/list_view_builder/league_fixture_list_view_builder.dart';
+import 'package:ultras_app/feature/widgets/fixture/sized_box/league_name/league_name.dart';
 
 class FixtureView extends StatelessWidget {
   FixtureView({
@@ -24,7 +23,7 @@ class FixtureView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    controller.getFixture(leagueID);
+    //controller.getFixture(leagueID);
     return BaseView<FixtureController>(
       isLoading: controller.isLoading,
       viewmodel: FixtureController(),
@@ -32,7 +31,7 @@ class FixtureView extends StatelessWidget {
         controller = viewmodel;
       },
       pageFunctions: () async {
-        controller.getFixture(leagueID);
+        //controller.getFixture(leagueID);
       },
       onPageBuilder: (context, controller) {
         return buildPageField();
@@ -55,66 +54,24 @@ class FixtureView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Expanded(flex: 1, child: fixtureImage()),
-            Expanded(flex: 3, child: fixtureName()),
-            Expanded(flex: 15, child: fixtureDetail()),
+            Expanded(flex: 1, child: buildLeagueImageField()),
+            Expanded(flex: 3, child: buildLeagueNameField()),
+            Expanded(flex: 15, child: buildLeagueFixtureField()),
           ],
         ),
       ),
     );
   }
 
-  fixtureImage() {
-    return SizedBox(
-      height: Get.height * .05,
-      child: Padding(
-        padding: EdgeInsets.only(left: Get.width * .04),
-        child: Image.asset('assets/logo/ultras_logo.png'),
-        // child: Image.network(leagueImage),
-      ),
-    );
+  buildLeagueImageField() {
+    return LeagueImage(imageUrl: leagueImage);
   }
 
-  fixtureName() {
-    return SizedBox(
-      height: Get.height * .175,
-      width: Get.width,
-      child: Padding(
-        padding: EdgeInsets.only(left: Get.width * .04, top: Get.height * .005),
-        child: Text(
-          leagueName.toUpperCase().trim(),
-          style: TextStyle(
-            height: 0,
-            fontSize: 70,
-            color: ColorConstants.black,
-          ),
-        ),
-      ),
-    );
+  buildLeagueNameField() {
+    return LeagueName(text: leagueName);
   }
 
-  fixtureDetail() {
-    return SizedBox(
-      height: Get.height * .7,
-      width: Get.width,
-      child: ListView.builder(
-        itemCount: controller.fixtureList.length,
-        itemBuilder: (context, index) {
-          Color backgroundColor =
-              Colors.primaries[index * 50 % Colors.primaries.length];
-          Color beforeColor = index == 0
-              ? Colors.white
-              : Colors.primaries[(index - 1) * 50 % Colors.primaries.length];
-          var model = controller.fixtureList[index];
-          return FixtureCard(
-            backgroundColor: backgroundColor,
-            beforeColor: beforeColor,
-            model: model,
-            dateTime: DateFormat("yyyy-MM-dd'T'HH:mm")
-                .parse(model.fixture.date.toString()),
-          );
-        },
-      ),
-    );
+  buildLeagueFixtureField() {
+    return LeagueFixtureListViewBuilder(list: controller.fixtureList);
   }
 }

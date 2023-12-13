@@ -1,13 +1,13 @@
 import 'package:get/get.dart';
 
-import '../../../../core/init/network/network_service.dart';
 import '../model/my_country_model.dart';
 import '../model/my_leagues_model.dart';
 import '../model/my_team_model.dart';
+import '../service/my_team_service.dart';
 
 class MyTeamController extends GetxController {
-  // ! NETWORK
-  final service = NetworkManager.instance;
+
+  final myTeamService = MyTeamService();
 
   // ! DATA LİSTS
   List<MyCountryModel> countryList = <MyCountryModel>[].obs;
@@ -45,7 +45,7 @@ class MyTeamController extends GetxController {
 
   Future<void> getAllCountries() async {
     isLoading.value = true;
-    final response = await service.getAllCountries();
+    final response = await myTeamService.getAllCountries();
     for (var country in response) {
       countryList.add(
         MyCountryModel(
@@ -60,7 +60,7 @@ class MyTeamController extends GetxController {
 
   Future<void> getLeaguesOfCountry(String country) async {
     isLoading.value = true;
-    final response = await service.getLeaguesOfCountry(country);
+    final response = await myTeamService.getLeaguesOfCountry(country);
     for (var league in response) {
       leagueList.add(
         MyLeagueModel(
@@ -76,7 +76,7 @@ class MyTeamController extends GetxController {
 
   Future<void> getTeamsOfLeague(int leagueID) async {
     isLoading.value = true;
-    final response = await service.getTeamsOfLeague(leagueID);
+    final response = await myTeamService.getTeamsOfLeague(leagueID);
     for (var team in response) {
       teamList.add(
         MyTeamModel(

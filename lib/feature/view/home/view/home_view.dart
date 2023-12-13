@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ultras_app/core/components/custom_bottom_navigation_bar/ultras_bottom_bar.dart';
+import 'package:ultras_app/core/components/body/ultras_view_body.dart';
 import 'package:ultras_app/core/init/base/view/base_view.dart';
 import 'package:ultras_app/feature/view/home/controller/home_controller.dart';
 import 'package:ultras_app/feature/widgets/home/tab_bar_view/home_tab_bar_view.dart';
@@ -14,7 +15,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    controller.getLeaguesAndCups();
+    //controller.getLeaguesAndCups();
     return BaseView<HomeController>(
       isLoading: controller.isLoading,
       viewmodel: HomeController(),
@@ -22,7 +23,7 @@ class HomeView extends StatelessWidget {
         controller = viewmodel;
       },
       pageFunctions: () async {
-        await controller.getLeaguesAndCups();
+        //await controller.getLeaguesAndCups();
       },
       onPageBuilder: (context, controller) {
         return buildPageField();
@@ -36,25 +37,20 @@ class HomeView extends StatelessWidget {
       child: Scaffold(
         backgroundColor: Colors.white,
         body: buildBodyField(),
+        //bottomNavigationBar: UltrasBottomBar(),
       ),
     );
   }
 
   buildBodyField() {
-    return SafeArea(
-      child: Padding(
-        padding: EdgeInsets.symmetric(
-          horizontal: Get.width * .02,
-        ),
-        child: Stack(
-          children: [
-            const HomeTabBar(),
-            HomeTabBarView(
-              controller: controller,
-            ),
-            UltrasBottomBar()
-          ],
-        ),
+    return UltrasViewBody(
+      child: Column(
+        children: [
+          const HomeTabBar(),
+          HomeTabBarView(
+            controller: controller,
+          ),
+        ],
       ),
     );
   }

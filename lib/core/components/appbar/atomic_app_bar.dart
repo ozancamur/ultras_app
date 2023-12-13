@@ -23,14 +23,14 @@ class AtomicAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      surfaceTintColor: ColorConstants.white,
+      surfaceTintColor: ColorConstants.WHITE,
       elevation: 0,
       leadingWidth: context.sized.dynamicWidth(.175),
       leading: isDisplayBack == true ? backMethod() : const SizedBox.shrink(),
       title: title,
       centerTitle: true,
       actions: actions,
-      backgroundColor: ColorConstants.white,
+      backgroundColor: ColorConstants.WHITE,
       
     );
   }

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kartal/kartal.dart';
+
 import '../../../../core/components/button/elevated_button/atomic_elevated_button.dart';
 import '../../../../core/components/card/atomic/atomic_card.dart';
-import '../../../../core/components/column/column_field.dart';
 import '../../../../core/constants/color/color_constants.dart';
 
 class LeagueCardColumn extends StatelessWidget {
@@ -34,7 +34,7 @@ class LeagueCardColumn extends StatelessWidget {
             ),
             padding: EdgeInsets.zero,
           ),
-          child: AtomicColumn(
+          child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

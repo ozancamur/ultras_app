@@ -34,12 +34,12 @@ class MatchTimeBox extends StatelessWidget {
         children: [
           Text(
             txtHour,
-            style: TextStyle(color: ColorConstants.black, fontSize: 35),
+            style: TextStyle(color: ColorConstants.BLACK, fontSize: 35),
           ),
           Text(
             ":$txtMinute",
             style: TextStyle(
-                color: ColorConstants.black.withOpacity(.5), fontSize: 35),
+                color: ColorConstants.BLACK.withOpacity(.5), fontSize: 35),
           )
         ],
       ),

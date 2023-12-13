@@ -30,8 +30,8 @@ class UltrasBottomBar extends StatelessWidget {
               margin: EdgeInsets.symmetric(
                   horizontal: Get.width * .05, vertical: Get.height * .015),
               decoration: BoxDecoration(
-                color: ColorConstants.ultrasGrey,
-                border: Border.all(width: 1.25,color: ColorConstants.white),
+                color: ColorConstants.ULTRAS_WHITE,
+                border: Border.all(width: 1.25,color: ColorConstants.WHITE),
                 borderRadius: BorderRadius.circular(24),
               ),
               child: Row(

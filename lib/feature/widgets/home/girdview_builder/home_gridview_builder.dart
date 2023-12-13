@@ -21,7 +21,7 @@ class HomeGridViewBuilder extends StatelessWidget {
           left: Get.width * .015,
           right: Get.width * .015),
       child: SizedBox(
-        height: Get.height * .9,
+        height: Get.height,
         width: Get.width,
         child: Obx(
           () => AtomicGridViewBuilder(

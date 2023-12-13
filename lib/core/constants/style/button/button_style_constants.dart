@@ -15,8 +15,8 @@ class ButtonStyleConstants{
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(50),
         ),
-        backgroundColor: ColorConstants.ultrasAppBlue,
-        foregroundColor: ColorConstants.ultrasAppWhite,
+        backgroundColor: ColorConstants.ULTRAS_BLUE,
+        foregroundColor: ColorConstants.ULTRAS_WHITE,
       );
 
   ButtonStyle get textButtonStyle => TextButton.styleFrom(

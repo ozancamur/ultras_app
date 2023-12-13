@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../../core/components/column/column_field.dart';
 import '../../../../core/constants/style/text/text_style_constants.dart';
 
 class MyTeamColumn extends StatelessWidget {
@@ -17,7 +16,7 @@ class MyTeamColumn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: Get.width*.025),
-      child: AtomicColumn(
+      child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ultras_app/core/components/card/fixture_card_background/fixture_card_background.dart';
 import 'package:ultras_app/feature/view/fixture/model/parent_model/fixture_response_model.dart';
+import 'package:ultras_app/feature/view/fixture_detail/view/fixture_detail_view.dart';
 import 'package:ultras_app/feature/widgets/fixture/column/date/match_date_box.dart';
 import 'package:ultras_app/feature/widgets/fixture/dotted_border/team_image.dart';
 import 'package:ultras_app/feature/widgets/fixture/sized_box/match/time/match_time_box.dart';
@@ -26,7 +27,9 @@ class FixtureCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Get.to(() => FixtureDetailView(model: model, backgroundColor: backgroundColor,));
+      },
       child: Stack(
         children: [
           SizedBox(
@@ -62,8 +65,8 @@ class FixtureCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            TeamImageDottedBorder(image: '${model.teams.home!.logo}'),
-            TeamImageDottedBorder(image: '${model.teams.away!.logo}'),
+            TeamImageDottedBorder(image: '${model.teams!.home!.logo}'),
+            TeamImageDottedBorder(image: '${model.teams!.away!.logo}'),
             MatchDateColumn(
               day: dateTime.day,
               monthIndex: dateTime.month,
@@ -83,8 +86,8 @@ class FixtureCard extends StatelessWidget {
         children: [
           MatchTimeBox(hour: dateTime.hour, minute: dateTime.minute,),
           TeamNamesBox(
-            home: '${model.teams.home!.name}',
-            away: '${model.teams.away!.name}',
+            home: '${model.teams!.home!.name}',
+            away: '${model.teams!.away!.name}',
           )
         ],
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultras_app/feature/view/fixture/model/parent_model/fixture_response_model.dart';
 import 'package:ultras_app/feature/view/fixture_detail/view/fixture_detail_view.dart';
 import 'core/init/lang/application_language.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       translationsKeys: ApplicationLanguage.translationKey,
-      locale: const Locale('tr','TR'),
+      locale: const Locale('tr', 'TR'),
       fallbackLocale: Get.deviceLocale,
       navigatorKey: Get.key,
       navigatorObservers: [GetObserver()],
@@ -25,7 +26,10 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         fontFamily: 'AJ Paglia',
       ),
-      home: FixtureDetailView()
+      home: FixtureDetailView(
+        model: FixtureResponseModel(),
+        backgroundColor: Colors.primaries[12 * 50 % Colors.primaries.length],
+      ),
     );
   }
 }

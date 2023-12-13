@@ -10,15 +10,14 @@ class FixtureService {
   Future<List<dynamic>> getFixture(int leagueID) async {
     try {
       final json = await dio.get(
-        ApiConstants.api + ApiConstants.fixtures,
+        ApiConstants.baseUrl + ApiConstants.fixtures,
         queryParameters: Map.fromEntries(
           [
-          //   const MapEntry("league", '23'),
-          //  const MapEntry('season', '2023'),
-            const MapEntry('date', '2020-02-06'),
+            const MapEntry("league", 187),
+           const MapEntry('season', 2023),
           ],
         ),
-        options: Options(headers: ApiConstants.apiHeader),
+        options: Options(headers: ApiConstants.headers),
       );
       List<dynamic> response = await json.data['response'];
       return response;
