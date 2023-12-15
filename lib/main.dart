@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/feature/view/home/view/home_view.dart';
 
 import 'core/constants/string/string_constants.dart';
+import 'core/init/bindings/ultras_bindings.dart';
 import 'core/init/lang/application_language.dart';
-import 'feature/view/fixture/model/child_model/teams_model.dart';
-import 'feature/view/fixture/model/grand_child_model/team_detail_model.dart';
-import 'feature/view/fixture/model/parent_model/fixture_response_model.dart';
-import 'feature/view/match/view/match_view.dart';
+import 'feature/view/home/view/home_view.dart';
 
 
 
@@ -21,6 +18,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      initialBinding: UltrasBindings(),
       translationsKeys: ApplicationLanguage.translationKey,
       locale: const Locale('en', 'US'),
       fallbackLocale: Get.deviceLocale,

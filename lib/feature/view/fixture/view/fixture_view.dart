@@ -21,7 +21,7 @@ class FixtureView extends StatelessWidget {
   final String leagueImage;
   final String leagueName;
 
-  FixtureController controller = Get.put(FixtureController());
+  FixtureController controller = Get.find<FixtureController>();
 
   @override
   Widget build(BuildContext context) {

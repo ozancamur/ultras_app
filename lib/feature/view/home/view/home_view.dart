@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //controller.getLeaguesAndCups();
+    controller.getLeaguesAndCups();
     return BaseView<HomeController>(
       isLoading: controller.isLoading,
       viewmodel: HomeController(),

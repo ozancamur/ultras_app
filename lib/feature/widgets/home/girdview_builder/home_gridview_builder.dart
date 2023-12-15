@@ -18,7 +18,6 @@ class HomeGridViewBuilder extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(
-          top: Get.height * .02,
           left: Get.width * .015,
           right: Get.width * .015),
       child: SizedBox(

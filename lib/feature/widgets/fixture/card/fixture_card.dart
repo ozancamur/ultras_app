@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:ultras_app/core/components/sized_box/team_names_box.dart';
 
-import '../../../../core/components/card/fixture_card_background/fixture_card_background.dart';
 import '../../../../core/components/sized_box/match_time_box.dart';
-import '../../../../core/components/sized_box/team_names_box.dart';
+import '../../../../core/components/card/fixture_card_background/fixture_card_background.dart';
 import '../../../view/fixture/model/parent_model/fixture_response_model.dart';
 import '../../../view/match/view/match_view.dart';
 import '../column/date/fixture_date_column.dart';
