@@ -14,23 +14,24 @@ class LeagueFixtureListViewBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AtomicListViewBuilder(
-        height: Get.height * .7,
-        width: Get.width,
-        length: list.length,
-        itemBuilder: (context, index) {
-          Color backgroundColor =
-              Colors.primaries[index * 50 % Colors.primaries.length];
-          Color beforeColor = index == 0
-              ? Colors.white
-              : Colors.primaries[(index - 1) * 50 % Colors.primaries.length];
-          var model = list[index];
-          return FixtureCard(
-            backgroundColor: backgroundColor,
-            beforeColor: beforeColor,
-            model: model,
-            dateTime: DateFormat("yyyy-MM-dd'T'HH:mm")
-                .parse(model.fixture!.date.toString()),
-          );
-        });
+      height: Get.height * .7,
+      width: Get.width,
+      length: list.length,
+      itemBuilder: (context, index) {
+        Color backgroundColor =
+            Colors.primaries[index * 50 % Colors.primaries.length];
+        Color beforeColor = index == 0
+            ? Colors.white
+            : Colors.primaries[(index - 1) * 50 % Colors.primaries.length];
+        var model = list[index];
+        return FixtureCard(
+          backgroundColor: backgroundColor,
+          beforeColor: beforeColor,
+          dateTime: DateFormat("yyyy-MM-dd'T'HH:mm")
+              .parse(model.fixture!.date.toString()),
+          model: model,
+        );
+      },
+    );
   }
 }

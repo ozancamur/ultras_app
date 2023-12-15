@@ -11,7 +11,7 @@ import '../controller/home_controller.dart';
 class HomeView extends StatelessWidget {
   HomeView({super.key});
 
-  HomeController controller = Get.put(HomeController());
+  HomeController controller = Get.find<HomeController>();
 
   @override
   Widget build(BuildContext context) {

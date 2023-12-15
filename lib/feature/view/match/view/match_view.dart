@@ -21,7 +21,8 @@ class MatchView extends StatelessWidget {
 
   final FixtureResponseModel model;
   final Color backgroundColor;
-  MatchController controller = Get.put(MatchController());
+
+  MatchController controller = Get.find<MatchController>();
 
   @override
   Widget build(BuildContext context) {
