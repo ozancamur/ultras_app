@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/components/appbar/atomic_app_bar.dart';
+
+import '../../../../core/components/appbar/atomic_app_bar.dart';
 
 class MatchAppBar extends StatelessWidget implements PreferredSizeWidget {
   const MatchAppBar({super.key, required this.backgroundColor});

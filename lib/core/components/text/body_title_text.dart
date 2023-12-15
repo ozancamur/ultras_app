@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
+
+import '../../constants/style/text/text_style_constants.dart';
 
 class BodyTitleText extends StatelessWidget {
   const BodyTitleText({

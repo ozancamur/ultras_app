@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:rive/rive.dart';
-import 'package:ultras_app/core/constants/rive/rive_constants.dart';
+
+import '../../constants/rive/rive_constants.dart';
 
 class UltrasLoading extends StatelessWidget {
   const UltrasLoading({super.key});

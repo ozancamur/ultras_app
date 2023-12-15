@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/sized_box/team_names_box.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import '../../../../core/components/sized_box/match_time_box.dart';
+
 import '../../../../core/components/card/fixture_card_background/fixture_card_background.dart';
+import '../../../../core/components/sized_box/match_time_box.dart';
+import '../../../../core/components/sized_box/team_names_box.dart';
+import '../../../../core/constants/color/color_constants.dart';
 import '../../../view/fixture/model/parent_model/fixture_response_model.dart';
 import '../../fixture/dotted_border/team_image.dart';
 import '../column/match_date_column.dart';

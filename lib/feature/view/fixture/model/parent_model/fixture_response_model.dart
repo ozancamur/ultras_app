@@ -1,8 +1,8 @@
-import 'package:ultras_app/feature/view/fixture/model/child_model/fixture_league_model.dart';
-import 'package:ultras_app/feature/view/fixture/model/child_model/fixture_model.dart';
-import 'package:ultras_app/feature/view/fixture/model/child_model/goals_model.dart';
-import 'package:ultras_app/feature/view/fixture/model/child_model/score_model.dart';
-import 'package:ultras_app/feature/view/fixture/model/child_model/teams_model.dart';
+import '../child_model/fixture_league_model.dart';
+import '../child_model/fixture_model.dart';
+import '../child_model/goals_model.dart';
+import '../child_model/score_model.dart';
+import '../child_model/teams_model.dart';
 
 class FixtureResponseModel {
 

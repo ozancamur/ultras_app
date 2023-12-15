@@ -1,6 +1,7 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/constants/api/api_constants.dart';
+
+import '../../../../core/constants/api/api_constants.dart';
 
 class HomeService {
   final dio = Dio();

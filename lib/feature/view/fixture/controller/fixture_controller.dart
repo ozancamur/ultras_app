@@ -1,16 +1,17 @@
 import 'package:get/get.dart';
-import 'package:ultras_app/feature/view/fixture/service/fixture_service.dart';
+
 import '../model/child_model/fixture_league_model.dart';
 import '../model/child_model/fixture_model.dart';
 import '../model/child_model/goals_model.dart';
 import '../model/child_model/score_model.dart';
 import '../model/child_model/teams_model.dart';
 import '../model/grand_child_model/periods_model.dart';
-import '../model/grand_child_model/status_model.dart';
 import '../model/grand_child_model/score_child_model.dart';
+import '../model/grand_child_model/status_model.dart';
 import '../model/grand_child_model/team_detail_model.dart';
 import '../model/grand_child_model/venue_model.dart';
 import '../model/parent_model/fixture_response_model.dart';
+import '../service/fixture_service.dart';
 
 class FixtureController extends GetxController {
   

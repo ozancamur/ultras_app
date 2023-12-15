@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
-import 'package:ultras_app/core/constants/api/api_constants.dart';
+
+import '../../../../core/constants/api/api_constants.dart';
 
 class MyTeamService {
   final dio = Dio();

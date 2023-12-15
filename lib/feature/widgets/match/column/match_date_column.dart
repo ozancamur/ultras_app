@@ -2,9 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
 
 import '../../../../../core/constants/color/color_constants.dart';
+import '../../../../core/constants/style/text/text_style_constants.dart';
 
 class MatchDateColumn extends StatelessWidget {
   MatchDateColumn({super.key, required this.day, required this.monthIndex});

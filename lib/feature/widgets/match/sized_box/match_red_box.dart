@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
+
+import '../../../../core/constants/color/color_constants.dart';
 
 class MatchRedBox extends StatelessWidget {
   const MatchRedBox({super.key});

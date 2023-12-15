@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/sized_box/team_name_box.dart';
+
+import 'team_name_box.dart';
 
 class TeamNamesBox extends StatelessWidget {
   const TeamNamesBox({

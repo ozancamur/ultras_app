@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/button/text_button/atomic_text_button.dart';
+
+import '../../../../core/components/button/text_button/atomic_text_button.dart';
 import '../column/score_and_time_column.dart';
 import '../list_tile/away_list_tile.dart';
 import '../list_tile/home_list_tile.dart';

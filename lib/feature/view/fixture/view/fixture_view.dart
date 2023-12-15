@@ -1,12 +1,13 @@
 // ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/text/body_title_text.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import 'package:ultras_app/core/init/base/view/base_view.dart';
-import 'package:ultras_app/feature/view/fixture/controller/fixture_controller.dart';
-import 'package:ultras_app/feature/widgets/fixture/image/fixture_image.dart';
-import 'package:ultras_app/feature/widgets/fixture/list_view_builder/league_fixture_list_view_builder.dart';
+
+import '../../../../core/components/text/body_title_text.dart';
+import '../../../../core/constants/color/color_constants.dart';
+import '../../../../core/init/base/view/base_view.dart';
+import '../../../widgets/fixture/image/fixture_image.dart';
+import '../../../widgets/fixture/list_view_builder/league_fixture_list_view_builder.dart';
+import '../controller/fixture_controller.dart';
 
 class FixtureView extends StatelessWidget {
   FixtureView({

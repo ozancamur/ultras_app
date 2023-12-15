@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
+
+import '../../../../core/constants/color/color_constants.dart';
+import '../../../../core/constants/style/text/text_style_constants.dart';
 
 class PastMatchBox extends StatelessWidget {
   const PastMatchBox({super.key, required this.teamName, required this.winCount, required this.color});

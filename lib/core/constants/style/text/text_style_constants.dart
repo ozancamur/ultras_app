@@ -1,9 +1,9 @@
 // ignore_for_file: non_constant_identifier_names
 
 import 'package:flutter/material.dart';
-import 'package:ultras_app/core/constants/string/string_constants.dart';
 
 import '../../color/color_constants.dart';
+import '../../string/string_constants.dart';
 
 @immutable
 class TextStyleConstants {

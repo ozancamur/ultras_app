@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kartal/kartal.dart';
+
 import '../../../../core/components/list_tile/atomic_list_tile.dart';
 import '../../../../core/constants/style/text/text_style_constants.dart';
 import '../../../view/my_team/model/my_leagues_model.dart';

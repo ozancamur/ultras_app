@@ -1,10 +1,10 @@
 import 'package:get/get.dart';
-import 'package:ultras_app/feature/view/home/service/home_service.dart';
+
+import '../../../../core/init/network/network_manager.dart';
 import '../model/league_model.dart';
+import '../service/home_service.dart';
 
 class HomeController extends GetxController {
-
-    
   //final HomeService homeService;
   //HomeService({required this.homeService});
 
@@ -21,6 +21,12 @@ class HomeController extends GetxController {
 
   void changeLoading() {
     isLoading.value = !isLoading.value;
+  }
+
+  Future<void> getLeaguesRequest() async {
+    changeLoading();
+    await NetworkManager.instance!.dioGet<LeagueModel>('', LeagueModel());
+    changeLoading();
   }
 
   Future<void> getLeaguesAndCups() async {

@@ -1,13 +1,27 @@
-class LeagueModel {
-  final int id;
-  final String name;
-  final String type;
-  final String logo;
+import '../../../../core/init/base/model/base_model.dart';
+
+part 'league_model.g.dart';
+
+class LeagueModel extends BaseModel {
+  int? id;
+  String? name;
+  String? type;
+  String? logo;
 
   LeagueModel({
-    required this.id,
-    required this.name,
-    required this.type,
-    required this.logo,
+    this.id,
+    this.name,
+    this.type,
+    this.logo,
   });
+  
+  @override
+  fromJson(Map<String, Object> json) {
+    return _$LeagueModelFromJson(json);
+  }
+  
+  @override
+  Map<String, Object> toJson() {
+    return _$LeagueModelToJson(this);
+  }
 }

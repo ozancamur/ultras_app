@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../../core/components/card/atomic/atomic_card.dart';
 import '../../../view/home/model/league_model.dart';
 import '../../league_detail/column/league_card_column.dart';
@@ -23,7 +24,7 @@ class LeagueCard extends StatelessWidget {
       margin: EdgeInsets.zero,
       elevation: 5,
       shadowColor: Colors.black,
-      child: LeagueCardColumn(logo: model.logo,name: model.name,color: elevationColor,onPressed: onPressed,)
+      child: LeagueCardColumn(logo: model.logo!,name: model.name!,color: elevationColor,onPressed: onPressed,)
     );
   }
 }

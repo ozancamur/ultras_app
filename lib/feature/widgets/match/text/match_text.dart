@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/text/body_title_text.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
+
+import '../../../../core/components/text/body_title_text.dart';
+import '../../../../core/constants/color/color_constants.dart';
 
 class MatchText extends StatelessWidget {
   const MatchText({super.key});

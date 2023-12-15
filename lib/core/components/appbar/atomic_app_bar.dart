@@ -3,10 +3,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:kartal/kartal.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
 
+import '../../constants/color/color_constants.dart';
 import '../../constants/string/string_constants.dart';
+import '../../constants/style/text/text_style_constants.dart';
 
 class AtomicAppBar extends StatelessWidget {
   AtomicAppBar({

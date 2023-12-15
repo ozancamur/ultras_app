@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/constants/string/string_constants.dart';
+
 import '../../../../core/components/tabbar/atomic_tabbar.dart';
 import '../../../../core/constants/color/color_constants.dart';
+import '../../../../core/constants/string/string_constants.dart';
 import '../../../../core/constants/style/text/text_style_constants.dart';
 
 class HomeTabBar extends StatelessWidget {

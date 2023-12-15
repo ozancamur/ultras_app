@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+
 import '../../../../core/components/gridview_builder/atomic_gridview_builder.dart';
 import '../../../view/fixture/view/fixture_view.dart';
 import '../../../view/home/controller/home_controller.dart';
@@ -38,9 +39,9 @@ class HomeGridViewBuilder extends StatelessWidget {
                     Colors.primaries[index * 100 % Colors.primaries.length],
                 onPressed: () => Get.to(
                   () => FixtureView(
-                    leagueID: model.id,
-                    leagueImage: model.logo,
-                    leagueName: model.name,
+                    leagueID: model.id!,
+                    leagueImage: model.logo!,
+                    leagueName: model.name!,
                   ),
                 ),
               );

@@ -2,18 +2,19 @@
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/body/ultras_view_body.dart';
-import 'package:ultras_app/core/constants/color/color_constants.dart';
-import 'package:ultras_app/core/constants/string/string_constants.dart';
-import 'package:ultras_app/core/constants/style/text/text_style_constants.dart';
-import 'package:ultras_app/core/init/base/view/base_view.dart';
-import 'package:ultras_app/feature/view/fixture/model/parent_model/fixture_response_model.dart';
-import 'package:ultras_app/feature/view/match/controller/match_controller.dart';
-import 'package:ultras_app/feature/widgets/match/appbar/match_appbar.dart';
-import 'package:ultras_app/feature/widgets/match/sized_box/match_red_box.dart';
-import 'package:ultras_app/feature/widgets/match/card/match_card.dart';
-import 'package:ultras_app/feature/widgets/match/sized_box/past_match_box.dart';
-import 'package:ultras_app/feature/widgets/match/text/match_text.dart';
+
+import '../../../../core/components/body/ultras_view_body.dart';
+import '../../../../core/constants/color/color_constants.dart';
+import '../../../../core/constants/string/string_constants.dart';
+import '../../../../core/constants/style/text/text_style_constants.dart';
+import '../../../../core/init/base/view/base_view.dart';
+import '../../../widgets/match/appbar/match_appbar.dart';
+import '../../../widgets/match/card/match_card.dart';
+import '../../../widgets/match/sized_box/match_red_box.dart';
+import '../../../widgets/match/sized_box/past_match_box.dart';
+import '../../../widgets/match/text/match_text.dart';
+import '../../fixture/model/parent_model/fixture_response_model.dart';
+import '../controller/match_controller.dart';
 
 class MatchView extends StatelessWidget {
   MatchView({super.key, required this.model, required this.backgroundColor});

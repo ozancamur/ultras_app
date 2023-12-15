@@ -1,8 +1,9 @@
 // ignore_for_file: must_be_immutable
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:ultras_app/core/components/loading/ultras_loading.dart';
-import 'package:ultras_app/core/init/base/state/base_state.dart';
+
+import '../../../components/loading/ultras_loading.dart';
+import '../state/base_state.dart';
 
 @immutable
 class BaseView<T extends GetxController> extends BaseStatelessWidget {
