@@ -16,12 +16,16 @@ class MatchCard extends StatelessWidget {
     required this.beforeColor,
     required this.model,
     required this.dateTime,
+    required this.leagueImage,
+    required this.leagueName,
   });
 
   final Color backgroundColor;
   final Color beforeColor;
   final FixtureResponseModel model;
   final DateTime dateTime;
+  final String leagueImage;
+  final String leagueName;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +52,9 @@ class MatchCard extends StatelessWidget {
       height: Get.height * .225,
       child: Padding(
         padding: EdgeInsets.symmetric(
-            vertical: Get.height * .01, horizontal: Get.width * .02),
+          vertical: Get.height * .01,
+          horizontal: Get.width * .02,
+        ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -71,7 +77,8 @@ class MatchCard extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Image.network(
-              'https://www.fifplay.com/img/public/premier-league-logo.png'),
+            leagueImage,
+          ),
           MatchDateColumn(
             day: dateTime.day,
             monthIndex: dateTime.month,
@@ -106,15 +113,22 @@ class MatchCard extends StatelessWidget {
       width: Get.width,
       padding: EdgeInsets.only(top: Get.height * .01),
       decoration: BoxDecoration(
-          border:
-              Border(top: BorderSide(width: 1, color: ColorConstants.GREY))),
+        border: Border(
+          top: BorderSide(
+            width: 1,
+            color: ColorConstants.GREY,
+          ),
+        ),
+      ),
       child: TeamNamesBox(
-          home: 'Manchester United',
-          away: 'Manchester City',
+          home: '${model.teams!.home!.name}',
+          away: '${model.teams!.away!.name}',
           width: Get.width,
           child: Text(
-            'Premier League',
-            style: TextStyle(color: ColorConstants.ULTRAS_WHITE),
+            leagueName,
+            style: TextStyle(
+              color: ColorConstants.ULTRAS_WHITE,
+            ),
           )),
     );
   }

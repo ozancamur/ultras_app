@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../../../core/components/appbar/atomic_app_bar.dart';
 
-class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const HomeAppBar({super.key});
+class LeaguesAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const LeaguesAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {

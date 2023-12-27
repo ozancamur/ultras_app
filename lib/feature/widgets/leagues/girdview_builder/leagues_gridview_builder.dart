@@ -3,15 +3,15 @@ import 'package:get/get.dart';
 
 import '../../../../core/components/gridview_builder/atomic_gridview_builder.dart';
 import '../../../view/fixture/view/fixture_view.dart';
-import '../../../view/home/controller/home_controller.dart';
-import '../../../view/home/model/league_model.dart';
+import '../../../view/leagues/controller/leagues_controller.dart';
+import '../../../view/leagues/model/league_model.dart';
 import '../card/league_card.dart';
 
-class HomeGridViewBuilder extends StatelessWidget {
-  const HomeGridViewBuilder(
+class LeaguesGridViewBuilder extends StatelessWidget {
+  const LeaguesGridViewBuilder(
       {super.key, required this.controller, required this.models});
 
-  final HomeController controller;
+  final LeaguesController controller;
   final List<LeagueModel> models;
 
   @override

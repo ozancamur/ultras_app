@@ -6,8 +6,8 @@ import '../../../../core/constants/color/color_constants.dart';
 import '../../../../core/constants/string/string_constants.dart';
 import '../../../../core/constants/style/text/text_style_constants.dart';
 
-class HomeTabBar extends StatelessWidget {
-  const HomeTabBar({super.key});
+class LeaguesTabBar extends StatelessWidget {
+  const LeaguesTabBar({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -3,8 +3,8 @@ import 'package:get/get.dart';
 
 import '../../../../core/constants/color/color_constants.dart';
 
-class MatchRedBox extends StatelessWidget {
-  const MatchRedBox({super.key});
+class RedBox extends StatelessWidget {
+  const RedBox({super.key});
 
   @override
   Widget build(BuildContext context) {

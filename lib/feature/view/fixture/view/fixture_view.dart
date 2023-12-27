@@ -25,7 +25,7 @@ class FixtureView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //controller.getFixture(leagueID);
+    controller.getFixture(leagueID);
     return BaseView<FixtureController>(
       isLoading: controller.isLoading,
       viewmodel: FixtureController(),
@@ -33,7 +33,9 @@ class FixtureView extends StatelessWidget {
         controller = viewmodel;
       },
       pageFunctions: () async {
-        //controller.getFixture(leagueID);
+        print('1');
+        await controller.getFixture(leagueID);
+        print('2');
       },
       onPageBuilder: (context, controller) {
         return buildPageField();

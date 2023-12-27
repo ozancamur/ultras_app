@@ -1,9 +1,9 @@
-import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
 import '../../constants/api/api_constants.dart';
+import '../base/model/base_error.dart';
 import '../base/model/base_model.dart';
 
 final class NetworkManager {
@@ -25,42 +25,30 @@ final class NetworkManager {
 
     _dio.interceptors.add(
       InterceptorsWrapper(
-        onRequest: (options, handler) {},
-        onResponse: (response, handler) {
-          return response.data;
-        },
         onError: (error, handler) {
-          return debugPrint('''
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        -----------------------------------
-        |||||| NETWORK MANAGER ERROR ||||||
-        -----------------------------------
-          error message:
-        ${error.message}
-        ...................................
-        -----------------------------------
-        |||||| NETWORK MANAGER ERROR ||||||
-        -----------------------------------
-        xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-        ''');
+          // TODO error view
+          BaseError(error.message);
         },
       ),
     );
   }
 
-  Future dioGet<T extends BaseModel>(String path, T model) async {
-    final response = await _dio.get(path);
-    switch(response.statusCode) {
-      case HttpStatus.ok:
-      final responseBody = response.data;
-      if(responseBody is List) { 
-        return responseBody.map((e) => model.fromJson(e)).toList();
-      } 
-      else if( responseBody is Map<String, Object>) {
-        return model.fromJson(responseBody);
-       } 
-      return responseBody;
-      default:
+  Future<List<dynamic>> dioGet<T extends BaseModel>(
+      String endpoint, T model, Map<String, dynamic>? queryParameters) async {
+    try {
+      final json = await _dio.get(
+        ApiConstants.BASE_URL + endpoint,
+        // options: Options(
+        //   headers: ApiConstants.HEADERS,
+        // ),
+        queryParameters: queryParameters,
+      );
+      List<dynamic> response = await json.data['response'];
+      return response;
+    } catch (e) {
+      debugPrint(
+          '****-SE-**** NetworkManager ERROR ****-SE-****');
+      return [];
     }
   }
 }

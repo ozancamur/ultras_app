@@ -16,20 +16,29 @@ class FixtureCard extends StatelessWidget {
     required this.beforeColor,
     required this.model,
     required this.dateTime,
+    required this.leagueImage,
+    required this.leagueName,
   });
 
   final Color backgroundColor;
   final Color beforeColor;
   final FixtureResponseModel model;
   final DateTime dateTime;
-
-
+  final String? leagueImage;
+  final String? leagueName;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Get.to(() => MatchView(model: model, backgroundColor: backgroundColor,));
+        Get.to(
+          () => MatchView(
+            model: model,
+            leagueImage: leagueImage!,
+            leagueName: leagueName!,
+            backgroundColor: backgroundColor,
+          ),
+        );
       },
       child: Stack(
         children: [
@@ -82,10 +91,13 @@ class FixtureCard extends StatelessWidget {
       height: Get.height * .075,
       width: Get.width,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MatchTimeBox(hour: dateTime.hour, minute: dateTime.minute,),
+          MatchTimeBox(
+            hour: dateTime.hour,
+            minute: dateTime.minute,
+          ),
           TeamNamesBox(
             home: '${model.teams!.home!.name}',
             away: '${model.teams!.away!.name}',

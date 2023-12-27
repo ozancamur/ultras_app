@@ -12,8 +12,8 @@ class TeamImageDottedBorder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DottedBorder(
-      color: ColorConstants.GREY,
-      strokeWidth: 1.5,
+      color: ColorConstants.WHITE,
+      strokeWidth: 1,
       dashPattern: const [5, 3],
       child: Padding(
         padding: EdgeInsets.all(Get.height * .004),

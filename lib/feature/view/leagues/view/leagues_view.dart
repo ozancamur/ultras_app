@@ -4,26 +4,26 @@ import 'package:get/get.dart';
 
 import '../../../../core/components/body/ultras_view_body.dart';
 import '../../../../core/init/base/view/base_view.dart';
-import '../../../widgets/home/tab_bar_view/home_tab_bar_view.dart';
-import '../../../widgets/home/tabbar/home_tabbar.dart';
-import '../controller/home_controller.dart';
+import '../../../widgets/leagues/tab_bar_view/leagues_tab_bar_view.dart';
+import '../../../widgets/leagues/tabbar/leagues_tabbar.dart';
+import '../controller/leagues_controller.dart';
 
-class HomeView extends StatelessWidget {
-  HomeView({super.key});
+class LeaguesView extends StatelessWidget {
+  LeaguesView({super.key});
 
-  HomeController controller = Get.find<HomeController>();
+  LeaguesController controller = Get.put(LeaguesController());
 
   @override
   Widget build(BuildContext context) {
     controller.getLeaguesAndCups();
-    return BaseView<HomeController>(
+    return BaseView<LeaguesController>(
       isLoading: controller.isLoading,
-      viewmodel: HomeController(),
+      viewmodel: LeaguesController(),
       onControllerReady: (viewmodel) {
         controller = viewmodel;
       },
       pageFunctions: () async {
-        //await controller.getLeaguesAndCups();
+        await controller.getLeaguesAndCups();
       },
       onPageBuilder: (context, controller) {
         return buildPageField();
@@ -45,9 +45,15 @@ class HomeView extends StatelessWidget {
     return UltrasViewBody(
       child: Column(
         children: [
-          const HomeTabBar(),
-          HomeTabBarView(
-            controller: controller,
+          const Expanded(
+            flex: 1,
+            child: LeaguesTabBar(),
+          ),
+          Expanded(
+            flex: 15,
+            child: LeaguesTabBarView(
+              controller: controller,
+            ),
           ),
         ],
       ),

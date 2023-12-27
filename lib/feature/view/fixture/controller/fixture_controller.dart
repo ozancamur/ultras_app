@@ -1,5 +1,8 @@
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../../core/constants/api/api_constants.dart';
+import '../../../../core/init/network/network_manager.dart';
 import '../model/child_model/fixture_league_model.dart';
 import '../model/child_model/fixture_model.dart';
 import '../model/child_model/goals_model.dart';
@@ -11,14 +14,8 @@ import '../model/grand_child_model/status_model.dart';
 import '../model/grand_child_model/team_detail_model.dart';
 import '../model/grand_child_model/venue_model.dart';
 import '../model/parent_model/fixture_response_model.dart';
-import '../service/fixture_service.dart';
 
 class FixtureController extends GetxController {
-  
-  //final FixtureService fixtureService;
-  //FixtureController({required this.fixtureService});
-
-  final fixtureService = FixtureService();
 
 // ! UI RESULTS
   var isLoading = false.obs;
@@ -28,7 +25,17 @@ class FixtureController extends GetxController {
 
   Future<void> getFixture(int id) async {
     isLoading.value = true;
-    final response = await fixtureService.getFixture(id);
+    final response = await NetworkManager.instance!.dioGet<FixtureResponseModel>(
+      ApiConstants.FIXTURES,
+      FixtureResponseModel(),
+      Map.fromEntries(
+        [
+          MapEntry("league", '$id'),
+          MapEntry("season", '${DateTime.now().year}'),
+        ],
+      ),
+    );
+    debugPrint('deneme $response');
     for (final fixture in response) {
       fixtureList.add(
         FixtureResponseModel(

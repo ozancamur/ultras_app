@@ -18,18 +18,23 @@ class LeagueFixtureListViewBuilder extends StatelessWidget {
       width: Get.width,
       length: list.length,
       itemBuilder: (context, index) {
-        Color backgroundColor =
-            Colors.primaries[index * 50 % Colors.primaries.length];
-        Color beforeColor = index == 0
+
+        Color backgroundColor = Colors.primaries[index * 50 % Colors.primaries.length];
+        Color beforeColor = 
+        index == 0
             ? Colors.white
             : Colors.primaries[(index - 1) * 50 % Colors.primaries.length];
+        
         var model = list[index];
+        
         return FixtureCard(
           backgroundColor: backgroundColor,
           beforeColor: beforeColor,
           dateTime: DateFormat("yyyy-MM-dd'T'HH:mm")
               .parse(model.fixture!.date.toString()),
           model: model,
+          leagueName: model.league!.logo,
+          leagueImage: model.league!.name,
         );
       },
     );

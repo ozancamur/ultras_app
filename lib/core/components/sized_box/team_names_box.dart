@@ -22,7 +22,7 @@ class TeamNamesBox extends StatelessWidget {
     return SizedBox(
       width: width ?? Get.width * .6,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           TeamNameBox(teamName: home),

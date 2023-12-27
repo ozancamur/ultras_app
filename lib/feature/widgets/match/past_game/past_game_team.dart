@@ -4,8 +4,8 @@ import 'package:get/get.dart';
 import '../../../../core/constants/color/color_constants.dart';
 import '../../../../core/constants/style/text/text_style_constants.dart';
 
-class PastMatchBox extends StatelessWidget {
-  const PastMatchBox({super.key, required this.teamName, required this.winCount, required this.color});
+class PastGameTeam extends StatelessWidget {
+  const PastGameTeam({super.key, required this.teamName, required this.winCount, required this.color});
 
   final String teamName;
   final int winCount;
