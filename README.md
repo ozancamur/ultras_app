@@ -1,8 +1,11 @@
 # ultras_app
 
-State Management: GetX
+State Management: GetX 
+
 Network Management: Dio
+
 Design Pattern: MVC
+
 Folder Structure: Feature Base
 
 
