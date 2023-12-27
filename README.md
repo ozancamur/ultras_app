@@ -1,6 +1,10 @@
 # ultras_app
 
-A new Flutter project.
+State Management: GetX
+Network Management: Dio
+Design Pattern: MVC
+Folder Structure: Feature Base
+
 
 ## Getting Started
 
