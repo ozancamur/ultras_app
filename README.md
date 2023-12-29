@@ -8,6 +8,11 @@ Design Pattern: MVC
 
 Folder Structure: Feature Base
 
+Packages for UI:
+  rive
+  dotted_border
+  auto_size_text
+  kartal
 
 ## Getting Started
 
